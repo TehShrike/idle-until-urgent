@@ -1,5 +1,4 @@
-const whenReasonable = require('./')
-const idleish = require('./idleish.js')
+const whenReasonable = require('.')
 
 const test = require('zora')
 const makeDeferred = require('p-defer')
@@ -8,7 +7,7 @@ const delay = require('delay')
 const nextIdleCallback = () => {
 	const deferred = makeDeferred()
 
-	idleish(deferred.resolve, 2000)
+	setTimeout(deferred.resolve, 2000);
 
 	return deferred.promise
 }

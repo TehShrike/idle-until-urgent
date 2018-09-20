@@ -7,7 +7,7 @@
   "source": "index.mjs",
   "scripts": {
     "build": "microbundle",
-    "test": "browserify -p esmify test.js | tape-run | faucet && node test.js | faucet && jsmd readme.md"
+    "test": "browserify test.js | tape-run | faucet && node test.js | faucet && jsmd readme.md"
   },
   "repository": "TehShrike/idle-until-urgent",
   "keywords": [
