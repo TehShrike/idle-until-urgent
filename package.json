@@ -23,7 +23,6 @@
   "devDependencies": {
     "browserify": "16.2.2",
     "delay": "4.0.1",
-    "esmify": "^1.2.0",
     "faucet": "0.0.1",
     "jsmd": "1.0.0",
     "microbundle": "^0.6.0",
