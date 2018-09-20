@@ -1,0 +1,25 @@
+{
+  "name": "idle-until-urgent",
+  "version": "1.0.0",
+  "description": "Defer JS work until the browser has a chance to breathe",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js | faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TehShrike/idle-until-urgent.git"
+  },
+  "keywords": [
+    "idle",
+    "requestidle",
+    "requestidlecallback",
+    "idle"
+  ],
+  "author": "TehShrike",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/TehShrike/idle-until-urgent/issues"
+  },
+  "homepage": "https://github.com/TehShrike/idle-until-urgent#readme"
+}
