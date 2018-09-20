@@ -1,6 +1,6 @@
 const root = typeof window != 'undefined' ? window : global
 
-module.exports = (fn, timeoutFallbackMs = 1000) => {
+export default (fn, timeoutFallbackMs = 1000) => {
 	if ('requestIdleCallback' in root) {
 		const handle = requestIdleCallback(fn)
 		return () => cancelIdleCallback(handle)

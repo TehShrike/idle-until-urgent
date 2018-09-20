@@ -1,8 +1,8 @@
-const idleish = require('./idleish.js')
+import idleish from './idleish.mjs';
 
 const UNLOADED = {}
 
-module.exports = workFn => {
+export default workFn => {
 	let result = UNLOADED
 
 	const clear = idleish(() => {

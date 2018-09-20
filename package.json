@@ -2,14 +2,14 @@
   "name": "idle-until-urgent",
   "version": "1.0.0",
   "description": "Defer JS work until the browser has a chance to breathe",
-  "main": "index.js",
+  "main": "dist/idle-until-urgent.js",
+  "module": "dist/idle-until-urgent.mjs",
+  "source": "index.mjs",
   "scripts": {
-    "test": "browserify test.js | tape-run | faucet && node test.js | faucet && jsmd readme.md"
+    "build": "microbundle",
+    "test": "browserify -p esmify test.js | tape-run | faucet && node test.js | faucet && jsmd readme.md"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TehShrike/idle-until-urgent.git"
-  },
+  "repository": "TehShrike/idle-until-urgent",
   "keywords": [
     "idle",
     "requestidle",
@@ -18,15 +18,15 @@
   ],
   "author": "TehShrike",
   "license": "WTFPL",
-  "bugs": {
-    "url": "https://github.com/TehShrike/idle-until-urgent/issues"
-  },
+  "bugs": "https://github.com/TehShrike/idle-until-urgent/issues",
   "homepage": "https://github.com/TehShrike/idle-until-urgent#readme",
   "devDependencies": {
     "browserify": "16.2.2",
     "delay": "4.0.1",
+    "esmify": "^1.2.0",
     "faucet": "0.0.1",
     "jsmd": "1.0.0",
+    "microbundle": "^0.6.0",
     "p-defer": "1.0.0",
     "tape-run": "4.0.0",
     "zora": "2.0.1"
