@@ -2,7 +2,7 @@
 
 Fetch resources lazily - either whenever the browser is next idle, or when you request the resource.
 
-In a browser that doesn't have [requestIdleTimeout](https://caniuse.com/#feat=requestidlecallback), or in node.js, falls back to `setTimeout(fn, 1000)`.
+In a browser that doesn't support [requestIdleCallback](https://caniuse.com/#feat=requestidlecallback), or in node.js where the API is not available, falls back to `setTimeout(fn, 1000)`.
 
 Inspired directly by [this 💯 post by Philip Walton](https://philipwalton.com/articles/idle-until-urgent/), but uses a function-based API instead of classes.  It's also about a third the size of [`idlize/defineIdleProperty.mjs`](https://github.com/GoogleChromeLabs/idlize/blob/master/defineIdleProperty.mjs) (after minification) by avoiding classes and using the dumbest possible `requestIdleTimeout` fallback.
 
